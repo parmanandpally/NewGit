@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "8rOvi9qBXUt5OMdoa9a4jsDAehJ29bwDPoVGkcCKOds=",
+  "Source": "testCoreApi",
+  "BasePath": "_content/testCoreApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "testCoreApi\\wwwroot",
+      "Source": "testCoreApi",
+      "ContentRoot": "D:\\testCoreApi\\testCoreApi\\wwwroot\\",
+      "BasePath": "_content/testCoreApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\testCoreApi\\testCoreApi\\wwwroot\\employees.html",
+      "SourceId": "testCoreApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\testCoreApi\\testCoreApi\\wwwroot\\",
+      "BasePath": "_content/testCoreApi",
+      "RelativePath": "employees.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\employees.html"
+    },
+    {
+      "Identity": "D:\\testCoreApi\\testCoreApi\\wwwroot\\index.html",
+      "SourceId": "testCoreApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\testCoreApi\\testCoreApi\\wwwroot\\",
+      "BasePath": "_content/testCoreApi",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+﻿<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <input type="button" id="btnGetData" value="Get Employee Data" />
+    <table border="1" id="tblEmployees"></table>
+    <br />
+    <hr />
+    <h3>Search Employee</h3>
+    Emp Number :<input type="text" id="txtEmpNumber" size="10" />
+    <input type="button" id="btnSearch" value=" Search " />
+    <p id="paraEmpResult"></p>
+    <script>
+        $(document).ready(function () {
+            var uri = "https://localhost:7281/api/employees";
+            var empList = $("#tblEmployees");
+
+            $("#btnGetData").click(function () {
+                $.getJSON(uri)
+                    .done(function (data) {
+                        empList.empty();
+                        // On success, 'data' contains a list of employees.
+                        $.each(data, function (key, item) {
+                            // Add a row to the table element.
+                            empList.append("<tr><td>" + item.employeeId + "<td>" + item.employeeName +
+                                "<td>" + item.departmentName + "<td>" + item.salary + "<td>" + item.joinDate);
+                        }); //end of each loop
+                    }); //end of done
+            }); // end of btnGetData
+
+            $("#btnSearch").click(function () {
+                var empid = $("#txtEmpNumber").val();
+                $.getJSON(uri + "/" + empid)
+                    .done(function (data) {
+                        alert(JSON.stringify(data));
+                        $("#paraEmpResult").text(data.employeeName);
+                    })
+                    .fail(function (jqXHR, status, err) {
+                        $("#paraEmpResult").text(err);
+                    }); //end of fail.
+            });// end of search button.
+        });// end of document.ready
+    </script>
+</body>
